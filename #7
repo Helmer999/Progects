@@ -1,0 +1,21 @@
+;  7.  Написать функцию, вычисляющую факториал переданного ей числа.
+
+def factorial(n):
+
+    if n < 0:
+        raise ValueError('Факториал не определёy')
+    if n == 0 or n == 1:
+        return 1
+    return n * factorial(n - 1)
+
+def main():
+    try:
+        number = int(input('Введите целое неотрицательное число: '))
+        result = factorial(number)
+        p_result = f'Факториал числа {number} равен {result}'
+        print(print_result)
+    except ValueError as e:
+        print(f'Ошибка: {e}')
+
+if name == 'main':
+    main()
